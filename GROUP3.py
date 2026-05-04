@@ -76,6 +76,6 @@ def delete():
         file.close()
         print("Deleted.\n")
     except:
-        print("Error.\n")
+        print("Error. Please try again.\n")
 
 
