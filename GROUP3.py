@@ -24,3 +24,23 @@ def read():
         file.close()
     except:
         print("No file found.\n")
+def update():
+    try:
+        file = open(FILE_NAME, "r")
+        lines = file.readlines()
+        file.close()
+
+        for i in range(len(lines)):
+            print(f"{i+1}. {lines[i].strip()}")
+
+        num = int(input("Choose entry number to update: "))
+        new = input("New text: ")
+        lines[num-1] = new + "\n"
+
+        file = open(FILE_NAME, "w")
+        file.writelines(lines)
+        file.close()
+        print("Updated.\n")
+    except:
+        print("Error.\n")
+
