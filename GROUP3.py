@@ -59,5 +59,23 @@ def search():
         file.close()
     except:
         print("No file.\n")
+def delete():
+    try:
+        file = open(FILE_NAME, "r")
+        lines = file.readlines()
+        file.close()
+
+        for i in range(len(lines)):
+            print(f"{i+1}. {lines[i].strip()}")
+
+        num = int(input("Delete entry number: "))
+        lines.pop(num-1)
+
+        file = open(FILE_NAME, "w")
+        file.writelines(lines)
+        file.close()
+        print("Deleted.\n")
+    except:
+        print("Error.\n")
 
 
