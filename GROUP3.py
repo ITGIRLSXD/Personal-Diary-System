@@ -43,4 +43,21 @@ def update():
         print("Updated.\n")
     except:
         print("Error.\n")
+def search():
+    try:
+        word = input("Search word: ")
+        file = open(FILE_NAME, "r")
+        found = False
+
+        for line in file:
+            if word.lower() in line.lower():
+                print("Found:", line.strip())
+                found = True
+
+        if not found:
+            print("Not found.")
+        file.close()
+    except:
+        print("No file.\n")
+
 
