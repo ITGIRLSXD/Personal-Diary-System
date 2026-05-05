@@ -88,7 +88,7 @@ while True:
     print("6 - Delete")
     print("7 - Exit")
 
-    choice = input("Enter choice: ")
+    choice = input("Enter option: ")
 
     if choice == "1":
         initialize()
