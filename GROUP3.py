@@ -1,6 +1,5 @@
 FILE_NAME = "diary.txt"
 
-# A - Initialize (x and w)
 def initialize():
     file = open(FILE_NAME, "w")
     text = input("Enter first diary entry: ")
@@ -79,3 +78,31 @@ def delete():
         print("Error. Please try again.\n")
 
 
+while True:
+    print("\nPERSONAL DIARY SYSTEM")
+    print("1 - Initialize")
+    print("2 - Append")
+    print("3 - Read")
+    print("4 - Update")
+    print("5 - Search")
+    print("6 - Delete")
+    print("7 - Exit")
+
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        initialize()
+    elif choice == "2":
+        append()
+    elif choice == "3":
+        read()
+    elif choice == "4":
+        update()
+    elif choice == "5":
+        search()
+    elif choice == "6":
+        delete()
+    elif choice == "7":
+        break
+    else:
+        print("Invalid choice.")
